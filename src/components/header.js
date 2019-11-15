@@ -5,7 +5,7 @@ export default class Header extends Component {
   render(){
     return(
       <View style={styles.container}>
-        <Text style={styles.welcome}>hello header welcome to solve the world of testst</Text>
+        <Text style={styles.welcome}>{this.props.title}</Text>
       </View>
     )
   }
@@ -13,15 +13,17 @@ export default class Header extends Component {
 
 const styles = {
   container: {
-    flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#',
+    justifyContent: 'center',
+    backgroundColor: '#f8f8f8',
+    paddingTop: 28,
+    borderBottomColor: '#ddd',
+    borderBottomWidth: 2,
   },
 
   welcome: {
-    fontSize: 50,
+    fontSize: 22,
     textAlign: 'center',
-    margin: 5,
+    fontWeight: 'bold'
   },
 };

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Button } from 'react-native';
+import { View, Text, Image } from 'react-native';
 
 export default class PhotoSection extends Component {
   render(){
@@ -8,20 +8,24 @@ export default class PhotoSection extends Component {
         <View stle ={styles.thumbnailSection}>
           <Image
             style={styles.thumbnail}
-            source={{uri:'https://img.icons8.com/doodle/48/000000/user.png'}}/>
+            source={require('../../assets/prfIcon.png')}/>
           <View style = {styles.userContainer}>
             <Text>UserName</Text>
           </View>
         </View>
+
         <View>
           <Image
-            source={{uri:'https://img.icons8.com/doodle/48/000000/user.png'}}/>
+            style={{width:null, height: 400}}
+            source={require('../../assets/back.jpg')}/>
         </View>
+
         <View>
-          <Button title ='like'/>
+
         </View>
-        <View>
-          <Text>UserName</Text>
+
+        <View style={styles.imageMata}>
+          <Text style={styles.username}>UserName</Text>
           <Text>Caption</Text>
         </View>
       </View>
@@ -38,6 +42,7 @@ const styles ={
     flexDirection: 'row',
     padding: 5,
     borderBottomColor: '#dddd',
+    borderBottomWidth: 1,
   },
 
   thumbnail: {
@@ -48,6 +53,17 @@ const styles ={
 
   userContainer:{
     justifyContent: 'center',
+    textAlign:'center',
     padding: 5
+  },
+
+  imageMata:{
+    flexDirection: 'row',
+    paddingRight: 5,
+  },
+
+  username: {
+    fontWeight:'bold',
+    paddingRight: 5
   }
 };

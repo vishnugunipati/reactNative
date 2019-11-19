@@ -28,6 +28,7 @@ export default class PhotoFeed extends Component{
   render(){
     return(
       <ScrollView>
+        {/*{this.getPhotos()}*/}
         <Text>{this.getPhotos()}</Text>
       </ScrollView>
     );

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Image, TouchableWithoutFeedback, ScrollView } from 'react-native';
-import { Ionicons } from '@expo/vector-icons'
+import { Ionicons } from '@expo/vector-icons';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class PhotoSection extends Component {
 
@@ -8,7 +9,7 @@ export default class PhotoSection extends Component {
     super();
 
     this.like = false;
-    this.state = {heartIcon: 'ios-heart'}
+    this.state = {heartIcon: 'ios-heart-empty'}
   }
 
   toggleLike(){
@@ -16,7 +17,7 @@ export default class PhotoSection extends Component {
     if(this.like){
       this.setState({heartIcon: 'ios-heart'})
     }else{
-      this.setState({heartIcon: 'ios-heart'});
+      this.setState({heartIcon: 'ios-heart-empty'});
     }
   }
   render(){
@@ -65,7 +66,8 @@ export default class PhotoSection extends Component {
 
         <View style={styles.heartContainer}>
           <TouchableWithoutFeedback onPress={ this.toggleLike.bind(this)}>
-            <Ionicons name={this.state.heartIcon} size={20}  />
+            <Ionicons name={this.state.heartIcon} size={20}
+            style={{color: this.state.heartIcon === 'ios-heart'?  'red' : 'black'}}/>
           </TouchableWithoutFeedback>
         </View>
 

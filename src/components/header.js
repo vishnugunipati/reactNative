@@ -1,5 +1,5 @@
 import React, { Component }from 'react';
-import { View, StyleSheet, Text, } from 'react-native';
+import { View, Text, } from 'react-native';
 
 export default class Header extends Component {
   render(){
@@ -16,7 +16,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#f8f8f8',
-    paddingTop: 28,
+    paddingTop: 35,
     borderBottomColor: '#ddd',
     borderBottomWidth: 2,
   },
